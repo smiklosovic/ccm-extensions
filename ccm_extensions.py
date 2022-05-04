@@ -101,6 +101,7 @@ def _ExtendedCluster(superclass):
             )
 
             self.delete_cluster_on_stop = delete_cluster_on_stop
+            self.set_configuration_options({'num_tokens': int(vnodes)})
 
             if populate:
                 self.populate(topology, vnodes, ipformat=ipformat)
